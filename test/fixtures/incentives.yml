@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ptid: MyString
+  serial_number: MyString
+  date_out: 2011-08-03
+  field_manager: MyString
+  transfered: false
+  date_transfered: 2011-08-03
+
+two:
+  ptid: MyString
+  serial_number: MyString
+  date_out: 2011-08-03
+  field_manager: MyString
+  transfered: false
+  date_transfered: 2011-08-03

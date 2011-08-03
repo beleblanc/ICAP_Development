@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ptid: MyString
+  enrollment: 2011-08-03
+  follow_up: 2011-08-03
+  handover: 2011-08-03
+  completion_code: 1
+  user_id: 1
+
+two:
+  ptid: MyString
+  enrollment: 2011-08-03
+  follow_up: 2011-08-03
+  handover: 2011-08-03
+  completion_code: 1
+  user_id: 1

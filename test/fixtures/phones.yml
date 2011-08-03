@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ptid: MyString
+  p_number: 1
+  p_type: MyString
+
+two:
+  ptid: MyString
+  p_number: 1
+  p_type: MyString

@@ -1,0 +1,37 @@
+<h1>Listing calllogs</h1>
+
+<table>
+  <tr>
+    <th>Ptid</th>
+    <th>Number</th>
+    <th>Attempttime</th>
+    <th>Outcome</th>
+    <th>Answerer</th>
+    <th>Refferal number</th>
+    <th>Callback</th>
+    <th>Comments</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @calllogs.each do |calllog| %>
+  <tr>
+    <td><%= calllog.ptid %></td>
+    <td><%= calllog.number_id %></td>
+    <td><%= calllog.attempttime %></td>
+    <td><%= calllog.outcome %></td>
+    <td><%= calllog.answerer %></td>
+    <td><%= calllog.refferal_number %></td>
+    <td><%= calllog.callback %></td>
+    <td><%= calllog.comments %></td>
+    <td><%= link_to 'Show', calllog %></td>
+    <td><%= link_to 'Edit', edit_calllog_path(calllog) %></td>
+    <td><%= link_to 'Destroy', calllog, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Calllog', new_calllog_path %>

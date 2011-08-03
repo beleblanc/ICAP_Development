@@ -1,0 +1,41 @@
+<%= form_for(@ptid) do |f| %>
+  <% if @ptid.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ptid.errors.count, "error") %> prohibited this ptid from being saved:</h2>
+
+      <ul>
+      <% @ptid.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ptid %><br />
+    <%= f.text_field :ptid %>
+  </div>
+  <div class="field">
+    <%= f.label :enrollment %><br />
+    <%= f.date_select :enrollment %>
+  </div>
+  <div class="field">
+    <%= f.label :follow_up %><br />
+    <%= f.date_select :follow_up %>
+  </div>
+  <div class="field">
+    <%= f.label :handover %><br />
+    <%= f.date_select :handover %>
+  </div>
+  <div class="field">
+    <%= f.label :completion_code %><br />
+    <%= f.text_field :completion_code %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

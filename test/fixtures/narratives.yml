@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  ptid: MyString
+  narratte: MyText
+  review: false
+
+two:
+  ptid: MyString
+  narratte: MyText
+  review: false

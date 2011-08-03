@@ -1,0 +1,27 @@
+<h1>Listing narratives</h1>
+
+<table>
+  <tr>
+    <th>Ptid</th>
+    <th>Narratte</th>
+    <th>Review</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @narratives.each do |narrative| %>
+  <tr>
+    <td><%= narrative.ptid %></td>
+    <td><%= narrative.narratte %></td>
+    <td><%= narrative.review %></td>
+    <td><%= link_to 'Show', narrative %></td>
+    <td><%= link_to 'Edit', edit_narrative_path(narrative) %></td>
+    <td><%= link_to 'Destroy', narrative, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Narrative', new_narrative_path %>

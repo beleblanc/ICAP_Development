@@ -1,0 +1,33 @@
+<h1>Listing ptids</h1>
+
+<table>
+  <tr>
+    <th>Ptid</th>
+    <th>Enrollment</th>
+    <th>Follow up</th>
+    <th>Handover</th>
+    <th>Completion code</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @ptids.each do |ptid| %>
+  <tr>
+    <td><%= ptid.ptid %></td>
+    <td><%= ptid.enrollment %></td>
+    <td><%= ptid.follow_up %></td>
+    <td><%= ptid.handover %></td>
+    <td><%= ptid.completion_code %></td>
+    <td><%= ptid.user_id %></td>
+    <td><%= link_to 'Show', ptid %></td>
+    <td><%= link_to 'Edit', edit_ptid_path(ptid) %></td>
+    <td><%= link_to 'Destroy', ptid, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Ptid', new_ptid_path %>

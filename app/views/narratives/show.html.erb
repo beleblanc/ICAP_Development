@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ptid:</b>
+  <%= @narrative.ptid %>
+</p>
+
+<p>
+  <b>Narratte:</b>
+  <%= @narrative.narratte %>
+</p>
+
+<p>
+  <b>Review:</b>
+  <%= @narrative.review %>
+</p>
+
+
+<%= link_to 'Edit', edit_narrative_path(@narrative) %> |
+<%= link_to 'Back', narratives_path %>

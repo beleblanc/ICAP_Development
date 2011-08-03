@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ptid:</b>
+  <%= @calllog.ptid %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @calllog.number_id %>
+</p>
+
+<p>
+  <b>Attempttime:</b>
+  <%= @calllog.attempttime %>
+</p>
+
+<p>
+  <b>Outcome:</b>
+  <%= @calllog.outcome %>
+</p>
+
+<p>
+  <b>Answerer:</b>
+  <%= @calllog.answerer %>
+</p>
+
+<p>
+  <b>Refferal number:</b>
+  <%= @calllog.refferal_number %>
+</p>
+
+<p>
+  <b>Callback:</b>
+  <%= @calllog.callback %>
+</p>
+
+<p>
+  <b>Comments:</b>
+  <%= @calllog.comments %>
+</p>
+
+
+<%= link_to 'Edit', edit_calllog_path(@calllog) %> |
+<%= link_to 'Back', calllogs_path %>

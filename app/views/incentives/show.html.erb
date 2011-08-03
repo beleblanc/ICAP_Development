@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ptid:</b>
+  <%= @incentive.ptid %>
+</p>
+
+<p>
+  <b>Serial number:</b>
+  <%= @incentive.serial_number %>
+</p>
+
+<p>
+  <b>Date out:</b>
+  <%= @incentive.date_out %>
+</p>
+
+<p>
+  <b>Field manager:</b>
+  <%= @incentive.field_manager %>
+</p>
+
+<p>
+  <b>Transfered:</b>
+  <%= @incentive.transfered %>
+</p>
+
+<p>
+  <b>Date transfered:</b>
+  <%= @incentive.date_transfered %>
+</p>
+
+
+<%= link_to 'Edit', edit_incentive_path(@incentive) %> |
+<%= link_to 'Back', incentives_path %>

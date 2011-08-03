@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ptid:</b>
+  <%= @ptid.ptid %>
+</p>
+
+<p>
+  <b>Enrollment:</b>
+  <%= @ptid.enrollment %>
+</p>
+
+<p>
+  <b>Follow up:</b>
+  <%= @ptid.follow_up %>
+</p>
+
+<p>
+  <b>Handover:</b>
+  <%= @ptid.handover %>
+</p>
+
+<p>
+  <b>Completion code:</b>
+  <%= @ptid.completion_code %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @ptid.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_ptid_path(@ptid) %> |
+<%= link_to 'Back', ptids_path %>

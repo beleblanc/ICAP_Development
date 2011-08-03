@@ -1,0 +1,49 @@
+<%= form_for(@calllog) do |f| %>
+  <% if @calllog.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calllog.errors.count, "error") %> prohibited this calllog from being saved:</h2>
+
+      <ul>
+      <% @calllog.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :ptid %><br />
+    <%= f.text_field :ptid %>
+  </div>
+  <div class="field">
+    <%= f.label :number_id %><br />
+    <%= f.text_field :number_id %>
+  </div>
+  <div class="field">
+    <%= f.label :attempttime %><br />
+    <%= f.time_select :attempttime %>
+  </div>
+  <div class="field">
+    <%= f.label :outcome %><br />
+    <%= f.text_field :outcome %>
+  </div>
+  <div class="field">
+    <%= f.label :answerer %><br />
+    <%= f.text_field :answerer %>
+  </div>
+  <div class="field">
+    <%= f.label :refferal_number %><br />
+    <%= f.text_field :refferal_number %>
+  </div>
+  <div class="field">
+    <%= f.label :callback %><br />
+    <%= f.time_select :callback %>
+  </div>
+  <div class="field">
+    <%= f.label :comments %><br />
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
