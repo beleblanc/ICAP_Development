@@ -14,7 +14,7 @@
   </tr>
 
 <% @ptids.each do |ptid| %>
-  <tr>
+  <tr class="<%= cycle('list_line_odd', 'List_line_even') %>">
     <td><%= ptid.ptid %></td>
     <td><%= ptid.enrollment %></td>
     <td><%= ptid.follow_up %></td>
