@@ -1,8 +1,13 @@
 Icap::Application.routes.draw do
+  match '/contact', :to => 'pages#contact'
+  match '/help', :to => 'pages#help'
+  match '/signin', :to => 'pages#signin'
   get "pages/home"
-
   get "pages/contact"
+  get "pages/help"
 
+  
+  
   resources :phones
 
   resources :calllogs
