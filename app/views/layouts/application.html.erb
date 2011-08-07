@@ -3,26 +3,35 @@
 <head>
   <title><%= @title %> | SHIMS Research Database</title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+	<!--[if lt IE 9]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/htnl5.js"></script>
+  	<![endif]-->
+	<%= stylesheet_link_tag 'screen', :media => 'screen' %>
+	<%= stylesheet_link_tag 'print', :media => 'print' %>
+	<!--[if lt IE 8]>	
+	<%= stylesheet_link_tag 'ie' %>	
+  	<![endif]-->	
+<%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
 <div class="container">
-	<div class="header append-bottom clearfix span-24">
-		<ul class="menu">
-			<li class="span-4 "><a href = "/">PTID</a>
+	<header class="append-bottom clearfix span-24">
+		<nav class="round"><ul class="menu">
+			<li class="span-4 "><%= link_to "Home",'#'%>
 				<ul>
-					<li class="span-1 "><a href = "/">View</a></li>
-					<li class="span-1 "><a href = "/">Add</a></li>
+					<li class="span-1 "><%= link_to "View", '#' %></li>
+					<li class="span-1 "><%= link_to "Add", '#' %></li>
 				</ul>
 			</li>
-			<li class="span-4 "><a href = "/">CALL LOG</a></li>
-			<li class="span-4 "><a href = "/">INCENTIVES</a></li>
-			<li class="span-4 "><a href = "/">CONTACT</a></li>
-		</ul>
+			<li class="span-4 "><%= link_to "Incentives", '#' %></li>
+			<li class="span-4 "><%= link_to "Sign-In", '#' %></li>
+			<li class="span-4 "><%= link_to "Contact", '#' %></li>
+		</ul></nav> 
+	</header>
+	<section class ="round"><%= yield %></section>
+	
 	</div>
-	<div class="main-body"><%= yield %></div>
-	<div class+"footer"></div>
-</>
+
 </body>
 </html>
