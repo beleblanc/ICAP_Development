@@ -3,7 +3,7 @@ class PtidsController < ApplicationController
   # GET /ptids.xml
   def index
     @ptids = Ptid.all
-
+    @title = "Reviewing PTIDs'"
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @ptids }
@@ -14,7 +14,7 @@ class PtidsController < ApplicationController
   # GET /ptids/1.xml
   def show
     @ptid = Ptid.find(params[:id])
-
+    @title = Ptid.find(params[:id]).ptid + " Details"
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @ptid }

@@ -4,8 +4,5 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-class Rails::Application
-  include Rake::DSL
-end
 
 Icap::Application.load_tasks

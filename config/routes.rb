@@ -1,10 +1,14 @@
 Icap::Application.routes.draw do
+  get "users/new"
+
   match '/contact', :to => 'pages#contact'
   match '/help', :to => 'pages#help'
   match '/signin', :to => 'pages#signin'
+  match '/signup', :to => 'users#new'
   get "pages/home"
   get "pages/contact"
   get "pages/help"
+  get "users/new"
 
   
   
